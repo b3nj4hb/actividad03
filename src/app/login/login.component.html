@@ -1,0 +1,50 @@
+<div>
+<mat-card class="example-card" >
+  <mat-card-title>LOGIN CON ANGULAR MATERIAL</mat-card-title>
+  <mat-card-subtitle>Por: Benjamin Huamani</mat-card-subtitle>
+
+  <mat-card-content>
+    <p>A continuación ingrese su usuario y contraseña:</p>
+    <!-- <p>{{ longText }}</p> -->
+    <!-- usuario -->
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese su usuario</mat-label>
+        <input matInput [type]=" 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+        </button>
+      </mat-form-field>
+    </div>
+    <!-- contraseña -->
+    <div class="example-container">
+      <mat-form-field appearance="fill">
+        <mat-label>Ingrese su contraseña</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" />
+        <button
+          mat-icon-button
+          matSuffix
+          (click)="hide = !hide"
+          [attr.aria-label]="'Hide password'"
+          [attr.aria-pressed]="hide"
+        >
+          <mat-icon>{{ hide ? "visibility_off" : "visibility" }}</mat-icon>
+        </button>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-divider inset></mat-divider>
+  <mat-card-actions>
+    <a mat-button href="/contenido" >INICIAR SESION</a>
+    <a mat-button href="#" >CERRAR SESION</a>
+    <!-- <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+  <mat-card-footer>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </mat-card-footer>
+</mat-card>
+</div>

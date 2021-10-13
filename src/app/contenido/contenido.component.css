@@ -1,0 +1,13 @@
+div {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  width: 80%;
+  margin-bottom: 60px;
+}
